@@ -5,6 +5,11 @@
       "url": "/",
       "external": false
     },
+        {
+      "text": "About",
+      "url": "/about",
+      "external": false
+    },
     {
       "text": "GitHub",
       "url": "https://github.com/andybelldesign/hylia",
