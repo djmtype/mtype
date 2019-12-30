@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
 title: A Generic Page?
-permalink: /a-generic-page
+permalink: ''
 ---
 What the heck does this do? And where…?
