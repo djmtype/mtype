@@ -14,6 +14,11 @@
       "text": "Twitter",
       "url": "https://twitter.com/hankchizljaw",
       "external": true
+    },
+    {
+      "text": "A Generic Page",
+      "url": "/a-generic-page",
+      "external": false
     }
   ]
 }
