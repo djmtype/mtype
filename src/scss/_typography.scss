@@ -9,6 +9,8 @@
     url('/fonts/lora-v13-latin-700.woff') format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap');
+
 body {
   // Strip the unit off the size ratio to generate a line height
   $line-height: get-size(600);
@@ -20,7 +22,7 @@ body {
 h1,
 h2,
 h3 {
-  @include apply-utility('font', 'serif');
+  @include apply-utility('font', 'sans');
 }
 
 h1 {
