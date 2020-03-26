@@ -7,7 +7,11 @@ permalink: /informer/index.html
 ## Form Test
 
 
-<form name="contact" method="POST" data-netlify="true">
+<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+<p style="display: none" class="hidden">
+     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+<input type="hidden" name="form-name" value="contact" />
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
