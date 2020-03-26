@@ -11,6 +11,12 @@ permalink: /informer/index.html
 
 <form action=" https://formsubmit.co/scott@spinlinestudio.com " method="POST">
 
+
+<input type="hidden" name="_replyto">
+<input type="hidden" name="_next" value="https://mtype.com/thanks">
+<input type="hidden" name="_subject" value="Formsubmit submission!">
+
+
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
@@ -27,14 +33,16 @@ permalink: /informer/index.html
     <label>Message: <textarea name="message"></textarea></label>
   </p>
 
-	<input type="hidden" name="_replyto">
-	<input type="hidden" name="_next" value="https://mtype.com/thanks">
-	<input type="hidden" name="_subject" value="Formsubmit submission!">
+
+	
+
   <p>
     <button type="submit">Send</button>
   </p>
 
 </form>
+
+---
 
 ### Netlify
 
