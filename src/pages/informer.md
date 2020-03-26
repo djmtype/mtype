@@ -6,7 +6,7 @@ permalink: /informer/index.html
 
 ## Form Test
 
-<form class="sf-flow" name="contact" method="POST" data-netlify="true" action="/thanks">
+<form class="sf-flow" name="contact" method="POST" data-netlify="true" action="/thanks/">
   <p>
     <label for="name">Your Name: </label><input type="text" name="name" id="name" />   
   </p>
