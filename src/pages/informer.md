@@ -6,22 +6,23 @@ permalink: /informer/index.html
 
 ## Form Test
 
-<form class="sf-flow" name="contact" method="POST" data-netlify="true">
+<form class="sf-flow" name="contact" method="POST" data-netlify="true" action="/thanks">
   <p>
-    <label>Your Name: </label><input type="text" name="name" />   
+    <label for="name">Your Name: </label><input type="text" name="name" id="name" />   
   </p>
   <p>
-    <label>Your Email: </label><input type="email" name="email" />
+    <label for="email">Your Email: </label><input type="email" name="email" id="email" />
   </p>
   <p>
-    <label>Your Role: </label><select name="role[]" multiple>
+    <label for="role">Your Role: </label><select id="role" name="role[]" multiple>
       <option value="leader">Leader</option>
       <option value="follower">Follower</option>
     </select>
   </p>
   <p>
-    <label>Message: </label><textarea name="message"></textarea>
+    <label for="message">Message: </label><textarea name="message" id="message"></textarea>
   </p>
+	<div netlify-recaptcha></div>
   <p>
     <button class="button" type="submit">Send</button>
   </p>
