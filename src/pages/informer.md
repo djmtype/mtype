@@ -22,7 +22,6 @@ permalink: /informer/index.html
   <p>
     <label for="message">Message: </label><textarea name="message" id="message"></textarea>
   </p>
-	<div netlify-recaptcha></div>
   <p>
     <button class="button" type="submit">Send</button>
   </p>
