@@ -9,7 +9,7 @@ permalink: /informer/index.html
 
 ### Formsubmit
 
-<form action="https://formsubmit.co/scott@spinlinestudio.com " method="POST">
+<form action="https://formsubmit.co/scott@spinlinestudio.com" method="POST">
 
 
 
