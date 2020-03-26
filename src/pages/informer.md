@@ -7,7 +7,7 @@ permalink: /informer/index.html
 ## Form Test
 
 
-<form name="contact" method="POST" data-netlify="true" action="thank-you">
+<form name="contact" method="POST" data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>   
   </p>
