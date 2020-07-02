@@ -7,37 +7,25 @@ permalink: /informer/index.html
 ## Form Test
 
 
-### Formsubmit
-
-<form action="https://formsubmit.co/scott@spinlinestudio.com" method="POST">
-
-
-
-
-
+<form class="sf-flow" name="contact" method="POST" data-netlify="true" action="/thanks/">
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
+    <label for="name">Your Name: </label><input type="text" name="name" id="name" />   
   </p>
   <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+    <label for="email">Your Email: </label><input type="email" name="email" id="email" />
   </p>
   <p>
-    <label>Your Role: <select name="role[]" multiple>
+    <label for="role">Your Role: </label><select id="role" name="role[]" multiple>
       <option value="leader">Leader</option>
       <option value="follower">Follower</option>
-    </select></label>
+    </select>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+    <label for="message">Message: </label><textarea name="message" id="message"></textarea>
   </p>
-
-
-	
-
   <p>
-    <button type="submit">Send</button>
+    <button class="button" type="submit">Send</button>
   </p>
-
 </form>
 
 
