@@ -8,6 +8,7 @@ permalink: /informer/index.html
 
 
 <form class="sf-flow" name="contact" method="POST" data-netlify="true" action="/thanks/">
+ <input type="hidden" name="subject" value="Website Submission" />
   <p>
     <label for="name">Your Name: </label><input type="text" name="name" id="name" />   
   </p>
