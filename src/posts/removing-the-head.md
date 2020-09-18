@@ -9,10 +9,6 @@ tags:
   - blog
 ---
 
-Static sites are better for our clients and more fun to build. Let's get started.
-
-- - -
-
 ## Where We Began 
 
 Historically whenever our project required a CMS, we've reached for Wordpress, the standalone open source project. It has been the defacto toolset in our utility belt, serving us well for over a decade.
