@@ -1,0 +1,237 @@
+code[class*="language-"] {
+	@extend .txt-mono;
+}
+	
+	code[class*="language-"],
+pre[class*="language-"] {
+	color: var(--color-gray-10);
+	// text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	// font-family: "JetBrains Mono", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	//	@extend .txt-mono;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: var(--txt-leading);
+	tab-size: 4;
+	hyphens: none;
+}
+
+pre[class*="language-"].line-numbers span::before {
+	color: var(--color-subtle-mute);
+	// border-color: blue;
+}
+
+.line-numbers .line-numbers-rows {
+	border-right: 2px solid var(--color-gray-90) !important;
+}
+
+code.language-css,
+code.language-scss {
+	color: var(--color-orange);
+}
+
+
+
+pre[class*="language-"] {
+	padding: var(--space-lg);
+// 	margin: 0.5em 0;
+	overflow-x: auto;
+	max-width: 100%;
+border-radius: var(--radius-rounded);
+// max-width: 75%;
+// max-width: calc(100% - var(--gutter) * 2);
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: var(--color-gray-90);
+}
+
+p, li {
+
+	code[class*="language-"] {
+
+line-height: var(--txt-leading-relative);
+		display: inline-block;
+		padding: var(--space-4xs) var(--space-2xs);
+// color: var(--color-primary);
+	//	line-height: var(--txt-leading-relative);
+	//	background-color: var(--color-gray-10);
+		@extend .txt-mono;
+	
+		border-radius: var(--radius);
+		// @extend .txt-xs;
+		letter-spacing: var(--txt-tracking-md);
+
+	// display: inline-block;
+	// background-color: var(--color-accent);
+	// color: var(--color-gray-90);
+	vertical-align: inherit;
+}
+}
+
+// :not(pre) > code[class*="language-"] {
+// 	padding: 0.1em;
+// 	border-radius: 0.3em;
+// }
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--color-gray-30);
+}
+
+.token.punctuation {
+	color: var(--color-gray-10);
+}
+
+// .token.property + .token.punctuation {
+// 	color: var(--color-red);
+// }
+
+.namespace {
+	opacity: 0.7;
+}
+
+//.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: var(--color-gray-10);
+}
+
+.token.property {
+	color: var(--color-gray-10);
+}
+
+// .token.atrule > .token.property {
+//   color: var(--color-orange);
+// }
+
+.token.hexcode.color {
+	color: var(--color-orange);
+}
+
+.token.combinator,
+.token.operator {
+	color: var(--color-yellow);
+}
+
+.token.boolean,
+.token.number {
+	color: var(--color-orange);
+}
+
+.token.selector,
+// .token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: var(--color-red);
+}
+
+.token.selector .token.punctuation {
+	color: var(--color-gray-10);
+}
+
+.token.attr-name {
+	color: var(--color-orange);
+}
+
+.token.class {
+	color: var(--color-yellow);
+	font-style: italic;
+}
+
+.token.entity,
+.token.url,
+//.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: var(--color-gray-10);
+}
+
+.language-css .token.string,
+.language-scss .token.string {
+	color: var(--color-green);
+}
+
+// .token.atrule,
+//.token.attr-value,
+.token.function {
+	color: var(--color-aqua);
+}
+
+.token.atrule {
+	color: var(--color-gray-10);
+}
+
+.token.rule {
+	color: var(--color-purple);
+}
+
+.token.attr-value {
+	color: var(--color-green);
+}
+
+.token.keyword {
+	color: var(--color-yellow);
+}
+
+.token.unit {
+	color: var(--color-purple);
+}
+
+.token.regex,
+.token.important {
+	color: var(--color-orange);
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.pseudo-class {
+	color: var(--color-gray-30);
+}
+
+code.language-js {
+	color: var(--color-red);
+
+	.token.operator {
+		color: var(--color-gray-10);
+	}
+
+	.token.maybe-class-name {
+		color: var(--color-gray-10);
+	}
+	.token.keyword {
+		color: var(--color-orange);
+	}
+	.token.string {
+		color: var(--color-green);
+	}
+}
+
+pre.line-numbers > code {
+
+    display: inline-block !important;
+    white-space: inherit !important;
+}
+
+
+

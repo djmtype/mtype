@@ -1,0 +1,15 @@
+:root {
+	--color-brand: var(--color-gray-10);
+}
+
+.site-header {
+	align-self: center;
+	// aspect-ratio: 2/1;
+	display: grid;
+	padding: var(--space-md);
+}
+
+.site-brand {
+	display: block;
+	text-align: center;
+}

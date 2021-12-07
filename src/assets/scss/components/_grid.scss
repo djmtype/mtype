@@ -1,0 +1,359 @@
+// ⚡️ Flash Grid
+$grid-columns: 12 !default;
+
+$col-width-xs: 7.5rem;
+$col-width-sm: 10rem;
+$col-width-md: var(--base-amount);
+$col-width-lg: 20rem;
+$col-width-xl: 25rem;
+
+
+
+.grid,
+[class*="grid-auto-"] {
+	display: grid;
+	width: 100%;
+gap: var(--gutter);
+	// margin-left: auto;
+	// margin-right: auto;
+	// &.scroller {
+	// 	overflow-x: visible;
+	// }
+	// &.scroller-y {
+	// 	overflow-y: hidden;
+	// }
+}
+
+
+
+
+
+.grid {
+	--grid-cols: #{$grid-columns};
+	grid-template-columns: repeat(var(--grid-cols), 1fr);
+
+	>* {
+		grid-column-end: span var(--grid-cols);
+	}
+}
+
+.grid-auto-xs,
+.grid-auto-sm,
+.grid-auto-md,
+.grid-auto-lg,
+.grid-auto-xl {
+	// auto-sized grid
+	grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+}
+
+.grid-auto-xs {
+	--col-min-width: #{$col-width-xs};
+}
+
+.grid-auto-sm {
+	--col-min-width: #{$col-width-sm};
+}
+
+.grid-auto-md {
+	--col-min-width: #{$col-width-md};
+}
+
+.grid-auto-lg {
+	--col-min-width: #{$col-width-lg};
+}
+
+.grid-auto-xl {
+	--col-min-width: #{$col-width-xl};
+}
+
+.grid-auto-cols {
+	// cols = same size
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+
+
+
+
+
+
+@for $i from 1 through $grid-columns {
+	.col-#{$i} {
+		grid-column-end: span #{$i};
+	}
+
+	.col-start-#{$i} {
+		grid-column-start: #{$i};
+	}
+
+	.col-end-#{$i+1} {
+		grid-column-end: #{$i+1};
+	}
+}
+
+.col-start {
+	grid-column-start: 1;
+}
+
+.col-end {
+	grid-column-end: -1;
+}
+
+// breakpoints
+// $breakpoints: (
+//   xs: 32rem,
+//   sm: 48rem,
+//   md: 64rem,
+//   lg: 80rem,
+//   xl: 90rem
+// ) !default;
+
+// See `_variables.scss` for breakpoints
+
+
+// @mixin breakpoint($breakpoint) {
+// 	@media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) {
+// 		@content;
+// 	}
+// }
+
+@include bp-min(xs) {
+	.xs\:grid-auto-xs {
+		--col-min-width: #{$col-width-xs};
+	}
+
+	.xs\:grid-auto-sm {
+		--col-min-width: #{$col-width-sm};
+	}
+
+	.xs\:grid-auto-md {
+		--col-min-width: #{$col-width-md};
+	}
+
+	.xs\:grid-auto-lg {
+		--col-min-width: #{$col-width-lg};
+	}
+
+	.xs\:grid-auto-xl {
+		--col-min-width: #{$col-width-xl};
+	}
+
+	.xs\:grid-auto-cols {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.xs\:col-#{$i} {
+			grid-column-end: span #{$i};
+		}
+
+		.xs\:col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.xs\:col-end-#{$i+1} {
+			grid-column-end: #{$i+1};
+		}
+	}
+
+	.xs\:col-start-auto {
+		grid-column-start: auto;
+	}
+
+	.xs\:col-end-auto {
+		grid-column-end: auto;
+	}
+}
+
+@include bp-min(sm) {
+	.sm\:grid-auto-xs {
+		--col-min-width: #{$col-width-xs};
+	}
+
+	.sm\:grid-auto-sm {
+		--col-min-width: #{$col-width-sm};
+	}
+
+	.sm\:grid-auto-md {
+		--col-min-width: #{$col-width-md};
+	}
+
+	.sm\:grid-auto-lg {
+		--col-min-width: #{$col-width-lg};
+	}
+
+	.sm\:grid-auto-xl {
+		--col-min-width: #{$col-width-xl};
+	}
+
+	.sm\:grid-auto-cols {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.sm\:col-#{$i} {
+			grid-column-end: span #{$i};
+		}
+
+		.sm\:col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.sm\:col-end-#{$i+1} {
+			grid-column-end: #{$i+1};
+		}
+	}
+
+	.sm\:col-start-auto {
+		grid-column-start: auto;
+	}
+
+	.sm\:col-end-auto {
+		grid-column-end: auto;
+	}
+}
+
+@include bp-min(md) {
+	.md\:grid-auto-xs {
+		--col-min-width: #{$col-width-xs};
+	}
+
+	.md\:grid-auto-sm {
+		--col-min-width: #{$col-width-sm};
+	}
+
+	.md\:grid-auto-md {
+		--col-min-width: #{$col-width-md};
+	}
+
+	.md\:grid-auto-lg {
+		--col-min-width: #{$col-width-lg};
+	}
+
+	.md\:grid-auto-xl {
+		--col-min-width: #{$col-width-xl};
+	}
+
+	.md\:grid-auto-cols {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.md\:col-#{$i} {
+			grid-column-end: span #{$i};
+		}
+
+		.md\:col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.md\:col-end-#{$i+1} {
+			grid-column-end: #{$i+1};
+		}
+	}
+
+	.md\:col-start-auto {
+		grid-column-start: auto;
+	}
+
+	.md\:col-end-auto {
+		grid-column-end: auto;
+	}
+}
+
+@include bp-min(lg) {
+	.lg\:grid-auto-xs {
+		--col-min-width: #{$col-width-xs};
+	}
+
+	.lg\:grid-auto-sm {
+		--col-min-width: #{$col-width-sm};
+	}
+
+	.lg\:grid-auto-md {
+		--col-min-width: #{$col-width-md};
+	}
+
+	.lg\:grid-auto-lg {
+		--col-min-width: #{$col-width-lg};
+	}
+
+	.lg\:grid-auto-xl {
+		--col-min-width: #{$col-width-xl};
+	}
+
+	.lg\:grid-auto-cols {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.lg\:col-#{$i} {
+			grid-column-end: span #{$i};
+		}
+
+		.lg\:col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.lg\:col-end-#{$i+1} {
+			grid-column-end: #{$i+1};
+		}
+	}
+
+	.lg\:col-start-auto {
+		grid-column-start: auto;
+	}
+
+	.lg\:col-end-auto {
+		grid-column-end: auto;
+	}
+}
+
+@include bp-min(xl) {
+	.xl\:grid-auto-xs {
+		--col-min-width: #{$col-width-xs};
+	}
+
+	.xl\:grid-auto-sm {
+		--col-min-width: #{$col-width-sm};
+	}
+
+	.xl\:grid-auto-md {
+		--col-min-width: #{$col-width-md};
+	}
+
+	.xl\:grid-auto-lg {
+		--col-min-width: #{$col-width-lg};
+	}
+
+	.xl\:grid-auto-xl {
+		--col-min-width: #{$col-width-xl};
+	}
+
+	.xl\:grid-auto-cols {
+		grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	}
+
+	@for $i from 1 through $grid-columns {
+		.xl\:col-#{$i} {
+			grid-column-end: span #{$i};
+		}
+
+		.xl\:col-start-#{$i} {
+			grid-column-start: #{$i};
+		}
+
+		.xl\:col-end-#{$i+1} {
+			grid-column-end: #{$i+1};
+		}
+	}
+
+	.xl\:col-start-auto {
+		grid-column-start: auto;
+	}
+
+	.xl\:col-end-auto {
+		grid-column-end: auto;
+	}
+}
+

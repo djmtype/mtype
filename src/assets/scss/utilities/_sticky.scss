@@ -1,0 +1,18 @@
+[class*="stick-"] {
+	position: sticky;
+	z-index: 2;
+}
+
+.stick-top {
+	position: sticky;
+	z-index: 2;
+		top: var(--gutter);
+		align-self: start;
+}
+
+.stick-bottom {
+	position: sticky;
+	z-index: 2;
+		bottom: var(--gutter);
+		align-self: end;
+}

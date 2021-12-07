@@ -1,0 +1,105 @@
+.txt-2xl {
+	font-size: var(--txt-2xl);
+
+	@include bp-min(md) {
+		font-size: var(--txt-2xl);
+		letter-spacing: var(--txt-tracking-xs);
+	}
+	@include bp-min(lg) {
+		font-size: var(--txt-3xl);
+	}
+}
+
+.txt-xl {
+	font-size: var(--txt-xl);
+}
+
+.txt-lg {
+	font-size: var(--txt-lg);
+}
+
+.txt-md {
+	font-size: var(--txt-md);
+}
+
+.txt-sm {
+	font-size: var(--txt-sm);
+}
+
+.txt-xs {
+	font-size: var(--txt-xs);
+}
+
+.txt-mono {
+
+	font-family: var(--txt-mono);
+	
+}
+
+.txt-center {
+	text-align: center;
+}
+.txt-uppercase {
+	text-transform: uppercase;
+	letter-spacing: var(--txt-tracking-md);
+	
+}
+
+
+
+.txt-mute {
+	color: var(--color-gray-30);
+}
+
+.txt-primary {
+	color: var(--color-primary);
+}
+
+.txt-accent {
+	color: var(--color-accent);
+}
+
+.txt-lite {
+	color: var(--color-gray-10);
+}
+
+.txt-dark {
+	color: var(--color-dark);
+}
+
+.txt-right {
+	text-align: right;
+}
+
+.txt-clip {
+	-webkit-text-fill-color: transparent;
+
+	background: linear-gradient(
+		to bottom right,
+		var(--color-orange),
+		var(--color-red)
+	);
+
+	background-clip: text;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.txt-weight-400 {
+	font-weight: 400;
+}
+
+.txt-weight-500 {
+	font-weight: 500;
+}
+
+.txt-weight-600 {
+	font-weight: 600;
+}
+
+
+.txt-caption {
+	font-size: var(--txt-xs);
+	margin-top: 0;
+	line-height: var(--txt-leading);
+}

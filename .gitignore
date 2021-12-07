@@ -1,17 +1,8 @@
 *.log
-npm-debug.*
-*.scssc
-*.log
-*.swp
+.cache
 .DS_Store
-.sass-cache
+src/.temp
 node_modules
-dist 
-
-# Specifics
-
-# Hide design tokens
-src/scss/_tokens.scss
-
-# Hide compiled CSS
-src/_includes/assets/*
+dist
+.env
+.env.*

@@ -1,0 +1,24 @@
+table {
+	border: var(--border-line) solid var(--color-subtle-mute);
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: var(--s-4) var(--s-2);
+	&:not(:last-child) {
+	border-right: var(--border-line) solid var(--color-subtle-mute);
+	}
+}
+
+tr:nth-child(even) {
+	background-color: var(--bg-content-color);
+}
+
+thead {
+	border-bottom: var(--border-line) solid var(--color-subtle-mute);
+	@extend .txt-uppercase;
+}
+
+tbody td {
+	@extend .txt-mono;
+}

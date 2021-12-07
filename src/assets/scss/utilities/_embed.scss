@@ -1,0 +1,34 @@
+.embed {
+  width: 100%;
+  position: relative;
+}
+
+
+
+.embed > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.embed {
+> img, > picture {
+	object-fit: cover;
+}
+}
+
+.embed-wide {
+aspect-ratio: 16/9;
+}
+
+.embed-sq {
+  aspect-ratio: 1/1;
+
+}
+
+.embed-rect {
+  aspect-ratio: 4/6;
+
+}

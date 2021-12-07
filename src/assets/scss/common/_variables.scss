@@ -1,0 +1,259 @@
+
+
+
+// =breakpoints
+$bp-2xs: 18rem;
+$bp-xs: 36rem; // 576
+$bp-sm: 52rem; // 768
+$bp-md: 62rem; // 992
+$bp-lg: 75rem; // 1200
+$bp-xl: 90rem; // 1440
+$bp-2xl: 100rem; // 1600
+$breakpoints: (
+	"2xs": $bp-2xs,
+	"xs": $bp-xs,
+	"sm": $bp-sm,
+	"md": $bp-md,
+	"lg": $bp-lg,
+	"xl": $bp-xl,
+	"2xl": $bp-2xl,
+) !default;
+
+:root {
+
+// =scale
+
+	--scale-size: 1.0rem;
+	// @media (min-width: 120rem) {
+	// 	--scale-size: 1.25rem;
+	// }
+	--scale-ratio: 1.25;
+	--scale-4xs: calc(var(--scale-3xs) / var(--scale-ratio));
+--scale-3xs: calc(var(--scale-2xs) / var(--scale-ratio));
+	--scale-2xs: calc(var(--scale-xs) / var(--scale-ratio));
+	--scale-xs: calc(var(--scale-size) / var(--scale-ratio));
+	--scale-sm: var(--scale-size);
+	--scale-md: calc(var(--scale-sm) * var(--scale-ratio));
+	--scale-lg: calc(var(--scale-md) * var(--scale-ratio));
+	--scale-xl: calc(var(--scale-lg) * var(--scale-ratio));
+	--scale-2xl: calc(var(--scale-xl) * var(--scale-ratio));
+	--scale-3xl: calc(var(--scale-2xl) * var(--scale-ratio));
+	--scale-4xl: calc(var(--scale-3xl) * var(--scale-ratio));
+}
+
+
+
+:root {
+
+// =text
+
+	--txt-xs: var(--scale-xs);
+	--txt-sm: var(--scale-sm); 
+	--txt-md: var(--scale-md); 
+	--txt-lg: var(--scale-lg); 
+	--txt-xl: var(--scale-xl); 
+	--txt-2xl: var(--scale-2xl); 
+	--txt-3xl: var(--scale-3xl); 
+	--txt-4xl: var(--scale-4xl); 
+
+	--txt-sans: system-ui, 
+	-apple-system, BlinkMacSystemFont, 
+	"Segoe UI", 
+	"Roboto", 
+	"Oxygen", 
+	"Ubuntu", 
+	"Cantarell", 
+	"Fira Sans", 
+	"Droid Sans", 
+	"Helvetica Neue", 
+	Arial, sans-serif;
+	--txt-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+	;
+
+	--txt-sans-title: Outfit, var(--txt-sans);
+
+	--txt-weight-400: 400;
+	--txt-weight-500: 500;
+	--txt-weight-600: 600;
+
+	--txt-tracking-xs: -.025em;
+	--txt-tracking-sm: 0;
+	--txt-tracking-md: .075em;
+
+
+	--txt-leading-absolute: 0.5rem;
+	--txt-leading-relative: 1.0em;
+	--txt-leading: calc(
+		var(--txt-leading-absolute) + var(--txt-leading-relative)
+	);
+
+}
+
+
+:root {
+	--flow-size: 1.0em;
+	--flow-ratio: 1.25;
+
+	--flow-3xs: calc(var(--flow-2xs) / var(--flow-ratio));
+	--flow-2xs: calc(var(--flow-xs) / var(--flow-ratio));
+	--flow-xs: calc(var(--flow-size) / var(--flow-ratio));
+	--flow-sm: var(--flow-size);
+	--flow-md: calc(var(--flow-sm) * var(--flow-ratio));
+	--flow-lg: calc(var(--flow-md) * var(--flow-ratio));
+	--flow-xl: calc(var(--flow-lg) * var(--flow-ratio));
+	--flow-2xl: calc(var(--flow-xl) * var(--flow-ratio));
+	--flow-3xl: calc(var(--flow-2xl) * var(--flow-ratio));
+	--flow-4xl: calc(var(--flow-3xl) * var(--flow-ratio));
+}
+
+:root {
+
+// =space
+--space-4xs: var(--scale-4xs);
+	--space-3xs: var(--scale-3xs);
+	--space-2xs: var(--scale-2xs);
+	--space-xs: var(--scale-xs);
+	--space-sm: var(--scale-sm); 
+	--space-md: var(--scale-md); 
+	--space-lg: var(--scale-lg); 
+	--space-xl: var(--scale-xl); 
+	--space-2xl: var(--scale-2xl); 
+	--space-3xl: var(--scale-3xl); 
+
+	// --space-unit: .5rem;
+	// --space-increment: 1.5;
+
+	// --space-xs: calc(var(--space-unit) / var(--space-increment));
+
+	// --space-sm: var(--space-unit);
+	// --space-md: calc(var(--space-sm) * var(--space-increment));
+	// --space-lg: calc(var(--space-md) * var(--space-increment));
+	// --space-xl: calc(var(--space-lg) * var(--space-increment));
+	// --space-2xl: calc(var(--space-xl) * var(--space-increment));
+	// --space-3xl: calc(var(--space-2xl) * var(--space-increment));
+	// --space-4xl: calc(var(--space-3xl) * var(--space-increment));
+
+	// --label-frame-ratio: 6;
+	// --label-frame-y: 0.15em;
+	// --label-frame-x: calc(var(--label-frame-y) * var(--label-frame-ratio));
+
+	// --btn-frame-ratio: .5;
+	// --btn-frame-y: 0.75em;
+	// --btn-frame-x: calc(var(--btn-frame-y) * var(--btn-frame-ratio));
+
+	--gutter: var(--space-lg);
+	@media (min-width: $bp-lg) {
+	--gutter: var(--space-xl);
+	}
+
+}
+
+:root {
+
+// =colors
+
+	--color-yellow: hsl(37, 100%, 67%);
+	--color-orange: hsl(20, 100%, 68%);
+	--color-red: hsl(341, 100%, 66%);
+	--color-purple: hsl(253, 87%, 79%);
+	--color-aqua: hsl(184, 80%, 59%);
+	--color-green: hsl(95, 65%, 64%);
+
+	@include defineColorHSL(--color-primary, 184, 80%, 59%);
+	@include defineColorHSL(--color-accent, 37, 100%, 67%);
+
+
+	// --primary-h: 184;
+	// --primary-s: 80%;
+	// --primary-l: 59%;
+	// --color-primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+	// --color-primary-contrast: hsl(var(--primary-h), var(--primary-s), 95%);
+
+	// --accent-h: 37;
+	// --accent-s: 100%;
+	// --accent-l: 67%;
+	// --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	// --color-accent-contrast: hsl(var(--accent-h), var(--accent-s), 95%);
+
+	--gray-h: var(--color-primary-h);
+	--gray-s: 5%;
+	--gray-l: 90%;
+	--gray-increment: 11.5%;
+
+	--gray-10-l: var(--gray-l);
+	
+	--gray-20-l: calc(
+		var(--gray-l) - var(--gray-increment) * 1
+	);
+	--gray-30-l: calc(
+		var(--gray-l) - var(--gray-increment) * 2
+	);
+	--gray-40-l: calc(
+		var(--gray-l) - var(--gray-increment) * 3
+	);
+	--gray-50-l: calc(
+		var(--gray-l) - var(--gray-increment) * 4
+	);
+	--gray-60-l: calc(
+		var(--gray-l) - var(--gray-increment) * 5
+	);
+	--gray-70-l: calc(
+		var(--gray-l) - var(--gray-increment) * 6
+	);
+	--gray-80-l: calc(
+		var(--gray-l) - var(--gray-increment) * 7
+	);
+	--gray-90-l: calc(
+		var(--gray-l) - var(--gray-increment) * 8
+	);
+
+	
+
+	--color-gray-10: hsl(var(--gray-h), var(--gray-s), var(--gray-10-l));
+	--color-gray-20: hsl(var(--gray-h), var(--gray-s), var(--gray-20-l));
+	--color-gray-30: hsl(var(--gray-h), var(--gray-s), var(--gray-30-l));
+	--color-gray-40: hsl(var(--gray-h), var(--gray-s), var(--gray-40-l));
+	--color-gray-50: hsl(var(--gray-h), var(--gray-s), var(--gray-50-l));
+	--color-gray-60: hsl(var(--gray-h), var(--gray-s), var(--gray-60-l));
+	--color-gray-70: hsl(var(--gray-h), var(--gray-s), var(--gray-70-l));
+	--color-gray-80: hsl(var(--gray-h), var(--gray-s), var(--gray-80-l));
+	--color-gray-90: hsl(var(--gray-h), var(--gray-s), var(--gray-90-l));
+
+
+// color alias
+
+	--color-border: hsla(var(--gray-h), var(--gray-s), var(--gray-10-l), 0.1);
+	--color-overlay: hsla(var(--gray-h), var(--gray-s), var(--gray-10-l), 0.07);
+	--color-overlay-dark: hsla(var(--gray-h), var(--gray-s), var(--gray-90-l), 0.5);
+	--color-background: var(--color-gray-80);
+	--color-body: var(--color-gray-10);
+--color-body-dimmed: hsla(var(--gray-h), var(--gray-s), var(--gray-10-l), 0.5);
+	--color-field-border: var(--color-gray-60);
+	--color-btn-bg: var(--color-gray-60);
+	--color-mute: var(--color-gray-30);
+
+}
+
+:root {
+
+	/* misc */
+	--base-amount: calc(.5vw + .5vh + 15rem);
+
+	--radius-rounded: 0.4em;
+	--radius-pill: 999em;
+	--radius-circle: 50%;
+
+	--radius: var(--radius-rounded);
+	--border-width: 1px;
+
+
+	--transition-all: 250ms ease all;
+	--transition-fill: 250ms ease fill;
+}
+
+:root {
+	--rotate-45: rotate(45deg);
+
+	--hsl-white: var(--gray-h) var(--gray-s) var(--gray-10-l);
+	// --hsl-white: 0 0% 100%;
+}

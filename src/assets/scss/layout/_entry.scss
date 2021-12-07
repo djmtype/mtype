@@ -1,0 +1,67 @@
+main {
+	li {
+		> ul,
+		> ol {
+			margin-block-start: var(--flow-md);
+			margin-block-end: var(--flow-md);
+		}
+	}
+
+	> h1 {
+		max-width: 24ch;
+	}
+	p, li, dt, dd {
+		max-width: 70ch;
+	}
+
+	blockquote p {
+		max-width: 50ch;
+	}
+}
+
+
+
+.footnotes {
+	color: var(--color-mute);
+	@extend .flow-v-lg;
+}
+
+.entry blockquote {
+	color: var(--color-orange);
+	position: relative;
+	padding: 0;
+
+	p {
+		font-weight: var(--txt-weight-500);
+		line-height: var(--txt-leading);
+		color: currentColor;
+		@extend .txt-clip;
+		font-size: var(--txt-md);
+	}
+}
+
+.entry blockquote *::selection {
+	-webkit-text-fill-color: currentColor;
+	background: var(--color-accent);
+	background-clip: initial;
+}
+
+.entry [id*="fn-"] {
+	counter-increment: list-counter;
+	display: flex;
+	&::before {
+		content: counter(list-counter, decimal-leading-zero) ".";
+		margin-right: 1ch;
+		font-family: var(--txt-mono);
+	}
+}
+
+.entry .footnotes * {
+	font-size: var(--txt-xs);
+	line-height: var(--txt-leading);
+}
+
+code .comment {
+	font-style: italic;
+ 
+ }

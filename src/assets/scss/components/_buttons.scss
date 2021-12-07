@@ -1,0 +1,41 @@
+.btn {
+	font-family: var(--txt-sans-title);
+	display: inline-flex;
+	vertical-align: middle;
+	padding: var(--space-3xs) var(--space-xl);
+	// font-weight: var(--txt-weight-500);
+border-radius: var(--radius-pill);
+	text-decoration: none;
+	cursor: pointer;
+	justify-items: center;
+	align-items: center;
+	text-align: center;
+	// transition: var(--transition-all);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: var(--border-width) solid transparent;
+	position: relative;
+
+	&:active {
+		transform: scale(.96);
+	}
+}
+
+.btn-primary {
+	&:link {
+		color: var(--color-gray-80);
+	background: var(--color-accent);
+	border-color: var(--color-accent);
+	}
+
+	&:visited {
+		color: var(--color-gray-80);
+		background: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+	&:hover, &:focus {
+		color: var(--color-accent);
+		background: var(--color-gray-80);
+		border-color: var(--color-accent);
+	}
+}

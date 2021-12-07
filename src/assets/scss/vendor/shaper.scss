@@ -1,0 +1,451 @@
+/* 
+https://hihayk.github.io/shaper/#Prodigy%20Sans,system-ui,%20sans-serif/1.25/1/3/0.8/1.5/0.5/215/50/35/15/0.4/2/false 
+*/
+
+:root {
+	
+--baseTextSize: 1rem;
+--textSizeIncrement: 1.25;
+
+--text-xs: calc(var(--baseTextSize) / var(--textSizeIncrement));
+--text-s: var(--baseTextSize);
+--text-m: calc(var(--text-s) * var(--textSizeIncrement));
+--text-l: calc(var(--text-m) * var(--textSizeIncrement));
+--text-xl: calc(var(--text-l) * var(--textSizeIncrement));
+
+--lineHeightFixedAmount: 0.35rem;
+--lineHeightRelativeAmount: 1.1em;
+--globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
+
+--fontFamily: Prodigy Sans,system-ui, sans-serif;
+
+--unit: 0.5rem;
+--spaceIncrement: 1.5;
+
+--space-s: var(--unit);
+--space-m: calc(var(--space-s) * var(--spaceIncrement));
+--space-l: calc(var(--space-m) * var(--spaceIncrement));
+--space-xl: calc(var(--space-l) * var(--spaceIncrement));
+--space-2xl: calc(var(--space-xl) * var(--spaceIncrement));
+--space-3xl: calc(var(--space-2xl) * var(--spaceIncrement));
+--space-4xl: calc(var(--space-3xl) * var(--spaceIncrement));
+
+--textFrameRatio: 3;
+--textFrameY: 0.8em;
+--textFrameX: calc(var(--textFrameY) * var(--textFrameRatio));
+
+
+	// colors
+	--color-gray-100: hsl(60, 20%, 98%);
+	--color-gray-300: hsl(300, 1%, 69%);
+	--color-gray-500: hsl(264, 3%, 35%);
+	--color-gray-800: hsl(288, 6%, 17%);
+	--color-gray-900: hsl(280, 4%, 14%);
+  --color-yellow: hsl(37, 100%, 67%);
+	--color-orange: hsl(20, 100%, 68%);
+	--color-red: hsl(341, 100%, 66%);
+	--color-purple: hsl(253, 87%, 79%);
+	--color-aqua: hsl(184, 80%, 59%);
+	--color-green: hsl(95, 65%, 64%);
+
+	--color-lite: var(--color-gray-100);
+	--color-gray-lite: var(--color-gray-300);
+	--color-gray-med: var(--color-gray-500);
+	--color-gray-dark: var(--color-gray-800);
+	--color-dark: var(--color-gray-900);
+
+	// --color-accent: var(--color-yellow);
+	// --color-primary: var(--color-aqua);
+
+--primaryH: 184;
+--primaryS: 80%;
+--primaryL: 59%;
+--color-primary: hsl(var(--primaryH), var(--primaryS), var(--primaryL));
+--color-primaryContrasted: hsl(var(--primaryH), var(--primaryS), 95%);
+
+
+
+--accentH: 37;
+--accentS: 100%;
+--accentL: 67%;
+--color-accent: hsl(var(--accentH), var(--accentS), var(--accentL));
+--color-accentContrasted: hsl(var(--accentH), var(--accentS), 95%);
+
+--greyH: var(--accentH);
+--greyS: 15%;
+--initialGreyLightness: 93%;
+--greyscaleLightnessIncrement: 11.3%;
+
+--grey1L:  var(--initialGreyLightness);
+--grey2L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 1);
+--grey3L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 2);
+--grey4L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 3);
+--grey5L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 4);
+--grey6L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 5);
+--grey7L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 6);
+--grey8L:  calc(var(--initialGreyLightness) - var(--greyscaleLightnessIncrement) * 7);
+
+--color-grey1: hsl(var(--greyH), var(--greyS), var(--grey1L));
+--color-grey2: hsl(var(--greyH), var(--greyS), var(--grey2L));
+--color-grey3: hsl(var(--greyH), var(--greyS), var(--grey3L));
+--color-grey4: hsl(var(--greyH), var(--greyS), var(--grey4L));
+--color-grey5: hsl(var(--greyH), var(--greyS), var(--grey5L));
+--color-grey6: hsl(var(--greyH), var(--greyS), var(--grey6L));
+--color-grey7: hsl(var(--greyH), var(--greyS), var(--grey7L));
+--color-grey8: hsl(var(--greyH), var(--greyS), var(--grey8L));
+
+
+
+--color-border: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.1);
+--color-overlay: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.07);
+--color-background: var(--color-grey8);
+--color-body: var(--color-grey1);
+--color-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey1L), 0.5);
+--color-fieldBorder: var(--color-grey6);
+--color-buttonBg: var(--color-grey6);
+
+--radius: 0.4rem;
+--fieldBorderWidth: 2px;
+
+}
+
+body.liteMode {
+--color-border: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.1);
+--color-overlay: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.07);
+--color-background: white;
+--color-body: var(--color-grey8);
+--color-bodyDimmed: hsla(var(--greyH), var(--greyS), var(--grey8L), 0.5);
+--color-fieldBorder: var(--color-grey2);
+--color-buttonBg: var(--color-grey2);
+}
+
+
+
+// =components
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  --settingsBg: var(--color-dark);
+
+  margin: 0;
+  background-color: var(--settingsBg);
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.textInput {
+  padding: calc(var(--textFrameY) - var(--fieldBorderWidth)) var(--textFrameY);
+  font: inherit;
+  color: inherit;
+  border: var(--fieldBorderWidth) solid var(--color-fieldBorder);
+  appearance: none;
+  border-radius: var(--radius);
+  width: 100%;
+  background-color: transparent;
+}
+
+.button {
+  padding: var(--textFrameY) var(--textFrameX);
+  font: inherit;
+  border: none;
+  background-color: var(--color-buttonBg);
+  appearance: none;
+  border-radius: var(--radius);
+  font-weight: var(--txt-weight-500);
+  cursor: pointer;
+  color: var(--color-body);
+  letter-spacing: 0.03em;
+  transition: 0.2s filter;
+}
+
+.button:hover {
+  filter: brightness(1.1);
+}
+
+.button:active {
+  filter: brightness(0.9);
+}
+
+.buttonSmall {
+  font-size: var(--text-xs);
+}
+
+.roundButtons .button {
+  border-radius: 1000rem;
+}
+
+.button-accent {
+  background-color: var(--color-accent);
+  color: var(--color-accentContrasted);
+}
+
+.button-accent span {
+  color: black;
+  mix-blend-mode: exclusion;
+}
+
+.card {
+  padding: var(--space-l);
+  background-color: white;
+  border-radius: var(--radius);
+}
+
+.detailsActions {
+  display: flex;
+}
+
+
+// =layout 
+.emailWrapper, .emailWrapper * {
+  line-height: var(--globalLineHeight);
+}
+
+.emailWrapper {
+  font-size: var(--text-s);
+  color: var(--color-body);
+  font-family: var(--fontFamily);
+  display: grid;
+  grid-template-columns: 17% 52% calc(100% - 17% - 52%);
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.sidebar {
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-l);
+}
+
+.detailsPanel {
+  border-left: 1px solid var(--color-border);
+  padding: var(--space-xl);
+  background-color: var(--color-overlay);
+}
+
+main {
+  padding: var(--space-xl);
+}
+
+.emails {
+  border-top: 1px solid var(--color-border);
+}
+
+.email {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding: var(--space-m) 0;
+  border-bottom: 1px solid var(--color-border);
+  min-width: 0;
+  min-width: 100%;
+}
+
+.listCell + .listCell {
+  padding-left: var(--space-l);
+}
+
+.listCell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.searchSection {
+  margin-bottom: var(--space-xl);
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+
+.postAvatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  grid-gap: var(--space-l);
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--color-overlay);
+}
+
+.detailsCard {
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--color-background); 
+}
+
+.menuItem {
+  padding: var(--space-s);
+  border-radius: var(--radius);
+}
+
+.menuItem.active {
+  background-color: var(--color-overlay); 
+  font-weight: bold;
+}
+
+.menuItem:not(.active) {
+  cursor: pointer;
+  color: var(--color-bodyDimmed);
+}
+
+.userCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: var(--space-m);
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--color-background);
+  align-items: center;
+}
+
+.userCardAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-gap: var(--space-s);
+  align-items: end;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab {
+  font-size: var(--text-m);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2em;
+}
+
+.tab:not(.active) {
+  cursor: pointer;
+  color: var(--color-bodyDimmed);
+}
+
+.tab + .tab {
+  margin-left: var(--space-l);
+}
+
+.tab.active {
+  border-color: var(--color-accent);
+}
+
+.messageBox {
+  padding: var(--space-m);
+  border-radius: var(--radius);
+  background-color: var(--color-primary-3xlight);
+  color: var(--color-primary-xdark);
+}
+
+.chartCard {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  background-color: var(--color-background);
+  align-items: center;
+}
+
+.chartCard .chart:first-child {
+  padding-right: var(--space-m);
+}
+
+.chartCard .chart + .chart {
+  padding-left: var(--space-m);
+  border-left: 1px solid var(--color-border);
+}
+
+.chartCard svg {
+  display: block;
+}
+
+.highlightCard {
+  background-color: var(--color-accent);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: var(--space-m);
+  padding: var(--space-l);
+  border-radius: var(--radius);
+  align-items: center;
+  color: var(--color-accentContrasted);
+}
+
+.highlightCardAvatar {
+  background-color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+
+.highlightCardAvatars {
+  display: flex;
+}
+
+.highlightCardAvatar + .highlightCardAvatar {
+  margin-left: -2.2rem;
+}
+
+.highlightCardAvatar:first-child {
+  z-index: 1;
+  opacity: 0.2;
+}
+
+.highlightCardAvatar:nth-child(2) {
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.highlightCardAvatar:nth-child(3) {
+  z-index: 3;
+}
+
+@media (max-width: 1100px) {
+  .emailWrapper {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+  .detailsPanel {
+    width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .mainLogoSection {
+    margin-right: 2rem;
+  }
+
+  .snippetSection {
+    display: block;
+  }
+  
+  .previewSection, .codeSection {
+    width: 100%;
+  }
+}
+
+.dataNumber {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
