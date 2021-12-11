@@ -31,7 +31,7 @@ const axios = require("axios");
 // let poster_images = `https://api.themoviedb.org/3/configuration?api_key=${process.env.MOVIE_API_KEY}`;
 
 
-let unsplash = `https://api.unsplash.com/photos/${item.id}/?client_id=${process.env.UNSPLASH_CLIENT_ID}`;
+// let unsplash = `https://api.unsplash.com/photos/${item.id}/?client_id=${process.env.UNSPLASH_CLIENT_ID}`;
 
 
 let movie_genres = `https://api.themoviedb.org/3/genre/movie/list?api_key=${
